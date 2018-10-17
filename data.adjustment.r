@@ -59,6 +59,6 @@ for(i in 1:nrow(dat))
 #scaling and/or transforming data
 dat$scsize = as.vector(scale(dat$csize)) #centroid size (of the claw)
 dat$scc = as.vector(scale(dat$cc)) #body size
-dat$sqap = sqrt(dat$ap) #strength
+dat$sqapodeme = sqrt(dat$apodeme) #strength
 
 #====================================================================
