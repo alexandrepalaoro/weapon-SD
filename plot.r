@@ -106,7 +106,7 @@ legend("topleft", pch=22, pt.bg = c("white", "grey"),
 #color legend
 
 ##################################
-#APODEME and MECHANICAL ADVANTAGE
+#APODEME (STRENGTH)
 ##################################
 
 mcmci = biglist$apodeme
@@ -210,25 +210,24 @@ png("Figure.5.png", height=21, width=25,res=450, units="cm")
 
 {
   colnames(dat)
-  colsY = c("sqap", "ma1", "scsize", "shape")
+  colsY = c("sqapodeme", "ma1", "scsize", "shape")
   colsX = c("scsize", "scsize", "scc", "scsize")
   ltypes = c(1, 3)
   lcolors = alpha(c("black", "grey70"),alpha=1) 
   
   par(las=1, bty="l", mar=c(6,7,3,3), family="Arial", mfrow=c(2,2),
       cex.lab=1.5)
-  order = c(3,1,2)
+  order = c(3,1,2) #trick to change the order of plotting
   
   for(h in 1:3)
   {
-    #g=1
-    g = order[h] #continua a gambiarra
-    qqi = biglist[[g]]$summary #recupera o summary adequado
+    g = order[h] 
+    qqi = biglist[[g]]$summary #takes the adequate model summary
     
-    intercepts = matrix(qqi[1:4, 2], nrow=2) #matriz de interceptos
-    slopes = matrix(qqi[5:8, 2], nrow=2) #matriz de slopes
+    intercepts = matrix(qqi[1:4, 2], nrow=2) #intercepts matrix
+    slopes = matrix(qqi[5:8, 2], nrow=2) #slopes matrix
     
-    #minimos e maximos dos valores de x pra dar o "crop" nas linhas
+    #min and max x values (to "crop" the lines adequately)
     minima = tapply(dat[,colsX[g]], list(dat$sp.number, dat$sex.number),min)
     maxima= tapply(dat[,colsX[g]], list(dat$sp.number, dat$sex.number),max)
     
