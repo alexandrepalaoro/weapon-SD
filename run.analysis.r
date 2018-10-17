@@ -38,7 +38,7 @@ axtract = function(x, parnames=NA, quantiles = c(c(0.025,0.5,0.975)))
 
 list.ap = list(N = nrow(dat),
                M = 2,
-               y = dat$sqap,
+               y = dat$sqapodeme,
                x = dat$scsize,
                sp = dat$sp.number,
                sex = dat$sex.number)
