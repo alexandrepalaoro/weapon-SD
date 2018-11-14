@@ -1,4 +1,8 @@
-Codes and datasets of the paper entitled "Fighting with style - patterns of sexual dimorphism differ between freshwater decapods (Aeglidae) with different fighting styles"
+Codes of the paper entitled "Fighting with style - patterns of sexual dimorphism differ between freshwater decapods (Aeglidae) with different fighting styles".
+
+If you use anything from this repository, please cite our DOI:
+
+[![DOI](https://zenodo.org/badge/151133158.svg)](https://zenodo.org/badge/latestdoi/151133158)
 
 -----------------------
 #### File summary:</br>
